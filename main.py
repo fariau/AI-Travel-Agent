@@ -14,18 +14,18 @@ config = RunConfig(model=model, tracing_disabled=True)
 
 destination_agent = Agent(
     name="DestinationAgent",
-    instructions="You recommend travel destination based on users mood.",
+    instructions="You recommend a travel destination based on the user's mood.",
     model=model
 )
 booking_agent = Agent(
     name="BookingAgent",
-    instructions="You give a flight and hotel info using tools.",
+    instructions="You provide flight and hotel information using the available tools.",
     model=model,
     tools=[get_flights, suggest_hotels]
 )
 explore_agent = Agent(
     name="ExploreAgent",
-    instructions="You suggest food and places to explore in the destination.",
+    instructions="You suggest food and attractions to explore at the destination.",
     model=model
 )
 
